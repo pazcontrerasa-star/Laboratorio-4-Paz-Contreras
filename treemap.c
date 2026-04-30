@@ -59,7 +59,7 @@ Pair * searchTreeMap(TreeMap * tree, void* key) {
 
     while(temp!=NULL ){
         if( is_equal(tree, key, temp->pair->key) == 1){
-            tree->temp = temp;
+            tree->current = temp;
             return temp->pair;
         }
         if(tree->lower_than(key, temp->pair->key)){
