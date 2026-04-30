@@ -2,3 +2,20 @@ Thu Apr 30 08:02:24 PM UTC 2026:
  tests:  1|8
 total_score: 0/60
 bf803e8
+Thu Apr 30 08:17:01 PM UTC 2026: 
+ treemap.c | 8 +++++---
+ 1 file changed, 5 insertions(+), 3 deletions(-)
+Compilation failed
+In file included from test.c:4:
+treemap.c: In function ‘createTreeMap’:
+treemap.c:46:43: error: expected expression before ‘TreeMap’
+   46 | TreeMap * Map = (TreeMap*) malloc(sizeof *TreeMap);
+      |                                           ^~~~~~~
+treemap.c:49:35: error: ‘key1’ undeclared (first use in this function)
+   49 |     Map->lower_than = lower_than (key1, key2);
+      |                                   ^~~~
+treemap.c:49:35: note: each undeclared identifier is reported only once for each function it appears in
+treemap.c:49:41: error: ‘key2’ undeclared (first use in this function)
+   49 |     Map->lower_than = lower_than (key1, key2);
+      |                                         ^~~~
+0515458
