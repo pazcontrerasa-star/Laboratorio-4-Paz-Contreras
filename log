@@ -117,3 +117,17 @@ treemap.c:61:33: error: ‘current’ undeclared (first use in this function)
       |                                 ^~~~~~~
 treemap.c:61:33: note: each undeclared identifier is reported only once for each function it appears in
 94fa060
+Thu Apr 30 08:46:23 PM UTC 2026: 
+ treemap.c | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+Compilation failed
+In file included from test.c:4:
+treemap.c: In function ‘searchTreeMap’:
+treemap.c:58:23: error: initialization of ‘TreeMap **’ from incompatible pointer type ‘TreeNode *’ [-Wincompatible-pointer-types]
+   58 |     TreeMap ** temp = tree->root;
+      |                       ^~~~
+treemap.c:61:33: error: ‘current’ undeclared (first use in this function)
+   61 |         if( is_equal(tree, key, current->pair->key) == 1){
+      |                                 ^~~~~~~
+treemap.c:61:33: note: each undeclared identifier is reported only once for each function it appears in
+25225f0
