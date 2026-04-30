@@ -57,8 +57,14 @@ TreeMap * Map = (TreeMap*) malloc(sizeof (TreeMap));
 Pair * searchTreeMap(TreeMap * tree, void* key) {
     TreeMap* temp = tree->root;
     Pair* par = temp->pair;
-    while(temp!=NULL && par!= NULL ){
-        if( isequal(key, par->key) == 1) return par->value;
+    while(temp!=NULL ){
+        if( isequal(tree, key, current->pair->key) == 1){
+            tree->current = current;
+            return current->pair;
+        }
+        if(tree->lower_than(key, current->pair->key)){
+            current = current->left;
+        }else current = current->right;
     }
     return NULL;
 }
