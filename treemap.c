@@ -55,7 +55,7 @@ TreeMap * Map = (TreeMap*) malloc(sizeof (TreeMap));
 // Si no se encuentra la clave retorna NULL. Recuerde hacer que el current apunte al nodo encontrado.
 
 Pair * searchTreeMap(TreeMap * tree, void* key) {
-    TreeMap * temp = tree->root;
+    TreeNode * temp = tree->root;
 
     while(temp!=NULL ){
         if( is_equal(tree, key, current->pair->key) == 1){
