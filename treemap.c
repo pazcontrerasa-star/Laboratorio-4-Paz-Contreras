@@ -58,13 +58,13 @@ Pair * searchTreeMap(TreeMap * tree, void* key) {
     TreeNode * temp = tree->root;
 
     while(temp!=NULL ){
-        if( is_equal(tree, key, current->pair->key) == 1){
-            tree->current = current;
-            return current->pair;
+        if( is_equal(tree, key, temp->pair->key) == 1){
+            tree->temp = temp;
+            return temp->pair;
         }
-        if(tree->lower_than(key, current->pair->key)){
-            current = current->left;
-        }else current = current->right;
+        if(tree->lower_than(key, temp->pair->key)){
+            temp = temp->left;
+        }else temp = temp->right;
     }
     return NULL;
 }
