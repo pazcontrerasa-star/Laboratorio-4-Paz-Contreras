@@ -82,7 +82,7 @@ void insertTreeMap(TreeMap * tree, void* key, void * value) {
         return;
     }
     TreeNode * current = tree->root;
-    treeNode * parent = NULL;
+    TreeNode * parent = NULL;
     while(current !=NULL){
         parent = current;
         if(key < current->key){
