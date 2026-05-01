@@ -327,3 +327,14 @@ Fri May  1 05:14:21 PM UTC 2026:
  tests:  20|2
 total_score: 40/60
 6545ca7
+Fri May  1 05:23:53 PM UTC 2026: 
+ treemap.c | 6 +++++-
+ 1 file changed, 5 insertions(+), 1 deletion(-)
+Compilation failed
+In file included from test.c:4:
+treemap.c: In function ‘nextTreeMap’:
+treemap.c:192:28: error: ‘TreeNode’ has no member named ‘curent’; did you mean ‘parent’?
+  192 |     TreeNode * sig = temp->curent->right;
+      |                            ^~~~~~
+      |                            parent
+79256b1
