@@ -354,3 +354,37 @@ Fri May  1 05:24:46 PM UTC 2026:
  tests:  21|2
 total_score: 43/60
 95014b0
+Fri May  1 05:45:52 PM UTC 2026: 
+ treemap.c | 14 +++++++++++---
+ 1 file changed, 11 insertions(+), 3 deletions(-)
+Compilation failed
+In file included from test.c:4:
+treemap.c: In function ‘nextTreeMap’:
+treemap.c:195:9: error: unknown type name ‘treeNode’; did you mean ‘TreeNode’?
+  195 |         treeNode * sig = temp->right;
+      |         ^~~~~~~~
+      |         TreeNode
+treemap.c:195:26: error: initialization of ‘int *’ from incompatible pointer type ‘TreeNode *’ [-Wincompatible-pointer-types]
+  195 |         treeNode * sig = temp->right;
+      |                          ^~~~
+treemap.c:196:18: error: request for member ‘left’ in something not a structure or union
+  196 |         while(sig->left !=NULL){
+      |                  ^~
+treemap.c:197:22: error: request for member ‘left’ in something not a structure or union
+  197 |             sig = sig->left;
+      |                      ^~
+treemap.c:199:23: error: assignment to ‘TreeNode *’ from incompatible pointer type ‘int *’ [-Wincompatible-pointer-types]
+  199 |         tree->current = sig;
+      |                       ^
+treemap.c:200:19: error: request for member ‘pair’ in something not a structure or union
+  200 |         return sig->pair;
+      |                   ^~
+treemap.c:203:8: error: ‘sig’ undeclared (first use in this function)
+  203 |     if(sig == NULL)return NULL;
+      |        ^~~
+treemap.c:203:8: note: each undeclared identifier is reported only once for each function it appears in
+treemap.c:204:1: error: control reaches end of non-void function [-Werror=return-type]
+  204 | }
+      | ^
+cc1: all warnings being treated as errors
+b233455
