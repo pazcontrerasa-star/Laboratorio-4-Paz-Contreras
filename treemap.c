@@ -189,7 +189,7 @@ Pair * firstTreeMap(TreeMap * tree) {
 
 Pair * nextTreeMap(TreeMap * tree) {
     TreeNode * temp = tree->current;
-    TreeNode * sig = temp->current->right;
+    TreeNode * sig = temp->right;
     if(sig == NULL)return NULL;
     tree->current = sig;
     return tree->current->pair;
