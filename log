@@ -260,3 +260,23 @@ Fri May  1 05:36:10 AM UTC 2026:
  tests:  15|4
 total_score: 25/60
 591c177
+Fri May  1 05:48:26 AM UTC 2026: 
+ treemap.c | 29 +++++++++++++++++++++++++++++
+ 1 file changed, 29 insertions(+)
+Compilation failed
+In file included from test.c:4:
+treemap.c: In function ‘removeNode’:
+treemap.c:135:26: error: implicit declaration of function ‘minimun’; did you mean ‘minimum’? [-Wimplicit-function-declaration]
+  135 |         TreeNode * min = minimun(node->right);
+      |                          ^~~~~~~
+      |                          minimum
+treemap.c:135:26: error: initialization of ‘TreeNode *’ from ‘int’ makes pointer from integer without a cast [-Wint-conversion]
+treemap.c:154:22: error: ‘child’ undeclared (first use in this function)
+  154 |         tree->root = child;
+      |                      ^~~~~
+treemap.c:154:22: note: each undeclared identifier is reported only once for each function it appears in
+treemap.c:155:14: error: suggest parentheses around assignment used as truth value [-Werror=parentheses]
+  155 |     }else if(node = node->parent->left){
+      |              ^~~~
+cc1: all warnings being treated as errors
+f615247
