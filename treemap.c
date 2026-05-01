@@ -199,6 +199,16 @@ Pair * nextTreeMap(TreeMap * tree) {
         tree->current = sig;
         return sig->pair;
     }
+    TreeNode * parent = temp->parent;
+    while(parent != NULL && temp == parent->right){
+        temp = parent;
+        parent = parent->parent;
+    }
+    tree->current = parent;
+
+    if(parent != NULL){
+        return parent->pair;
+    }else return NULL;
     
 }
 
