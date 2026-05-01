@@ -433,3 +433,35 @@ Fri May  1 08:54:49 PM UTC 2026:
  tests:  25|1
 total_score: 50/60
 ab3a265
+Fri May  1 09:20:54 PM UTC 2026: 
+ treemap.c | 19 ++++++++++++++++++-
+ 1 file changed, 18 insertions(+), 1 deletion(-)
+Compilation failed
+In file included from test.c:4:
+treemap.c: In function ‘upperBound’:
+treemap.c:222:5: error: unknown type name ‘treeNode’; did you mean ‘TreeNode’?
+  222 |     treeNode * temp = tree->root;
+      |     ^~~~~~~~
+      |     TreeNode
+treemap.c:222:23: error: initialization of ‘int *’ from incompatible pointer type ‘TreeNode *’ [-Wincompatible-pointer-types]
+  222 |     treeNode * temp = tree->root;
+      |                       ^~~~
+treemap.c:225:31: error: request for member ‘pair’ in something not a structure or union
+  225 |         if(is_equal(tree, temp->pair->key, key)){
+      |                               ^~
+treemap.c:226:21: error: assignment to ‘TreeNode *’ from incompatible pointer type ‘int *’ [-Wincompatible-pointer-types]
+  226 |             ub_node = temp;
+      |                     ^
+treemap.c:229:43: error: request for member ‘pair’ in something not a structure or union
+  229 |         else if(tree->lower_than(key, temp->pair->key)){
+      |                                           ^~
+treemap.c:230:21: error: assignment to ‘TreeNode *’ from incompatible pointer type ‘int *’ [-Wincompatible-pointer-types]
+  230 |             ub_node = temp;
+      |                     ^
+treemap.c:231:24: error: request for member ‘left’ in something not a structure or union
+  231 |             temp = temp->left;
+      |                        ^~
+treemap.c:234:24: error: request for member ‘right’ in something not a structure or union
+  234 |             temp = temp->right;
+      |                        ^~
+22b62b8
