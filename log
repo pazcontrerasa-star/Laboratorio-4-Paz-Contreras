@@ -305,3 +305,13 @@ Fri May  1 04:57:06 PM UTC 2026:
  tests:  18|3
 total_score: 35/60
 19d806c
+Fri May  1 05:12:50 PM UTC 2026: 
+ treemap.c | 10 +++++++++-
+ 1 file changed, 9 insertions(+), 1 deletion(-)
+Compilation failed
+In file included from test.c:4:
+treemap.c: In function ‘firstTreeMap’:
+treemap.c:180:20: error: expected ‘;’ before ‘:’ token
+  180 |         return NULL:
+      |                    ^
+916c519
