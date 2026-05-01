@@ -388,3 +388,18 @@ treemap.c:204:1: error: control reaches end of non-void function [-Werror=return
       | ^
 cc1: all warnings being treated as errors
 b233455
+Fri May  1 05:46:17 PM UTC 2026: 
+ treemap.c | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+Compilation failed
+In file included from test.c:4:
+treemap.c: In function ‘nextTreeMap’:
+treemap.c:203:8: error: ‘sig’ undeclared (first use in this function)
+  203 |     if(sig == NULL)return NULL;
+      |        ^~~
+treemap.c:203:8: note: each undeclared identifier is reported only once for each function it appears in
+treemap.c:204:1: error: control reaches end of non-void function [-Werror=return-type]
+  204 | }
+      | ^
+cc1: all warnings being treated as errors
+d7e1e0f
